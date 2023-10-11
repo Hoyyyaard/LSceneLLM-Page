@@ -93,7 +93,7 @@
                 </div> -->
             </div>
             <div class="title-row">
-                <h2 class="subheader">NeurIPS 2023 (Poster)</h2>
+                <h2 class="subheader">NeurIPS 2023</h2>
             </div>
             <div class="link-labels base-row">
                 <!-- TODO: Update arxiv link -->
@@ -154,17 +154,19 @@
                     <p class="paragraph">
                         We implement the goal prompting scheme as a fusion process between the goal and observation images and design a early fusion (<b>FGPrompt-EF</b>) and a mid fusion (<b>FGPrompt-MF</b>) mechanism. We also implement a heuristic skip fusion baseline to validate the effectiveness of the proposed learnable modules.
                     </p>
-                    <p class="paragraph">
-                        The <b>Early Fusion</b> mechanism is built upon a naive solution to exchange information in two images that directly concatenate them together in the channel dimension before input to the encoder. We found that this simple design yields a promising performance on the image navigation benchmark. 
-                        However, as it enables spatial reasoning between two images using an identical convolution kernel, <i>it may be difficult to handle the situation when the orientation of the goal camera is noisy.</i>
-                    </p>
-                    <p class="paragraph">
-                        The <b>Mid Fusion</b> mechanism is a more robust solution in comparison. It leverages fine-grained and high-resolution feature maps in the intermediate goal network layers as the prompts,
-                        which are proven to contain informative object details. We then utilize FiLM layers to learn a transform function to adjust the observation
-                        activations to focus on goal-relevant objects.
-                    </p>
                     <img id="clip-img" src="./data/methods_00.png">
                     <figcaption>Overview of our proposed method. All of the variants are built upon the end-to-end RL baseline.</figcaption>
+                    <p class="paragraph"></p>
+                    <p class="paragraph">
+                        The <b>Early Fusion</b> mechanism is built upon a naive solution to exchange information in two images that directly concatenate them together in the channel dimension before input to the encoder. 
+                        <!-- We found that this simple design yields a promising performance on the image navigation benchmark. 
+                        However, as it enables spatial reasoning between two images using an identical convolution kernel, <i>it may be difficult to handle the situation when the orientation of the goal camera is noisy.</i> -->
+                    </p>
+                    <p class="paragraph">
+                        The <b>Mid Fusion</b> mechanism is a more robust solution in comparison. It leverages fine-grained and high-resolution feature maps in the intermediate goal network layers as the prompts. 
+                        <!-- We then utilize FiLM layers to learn a transform function to adjust the observation activations to focus on goal-relevant objects. -->
+                    </p>
+                    
                 </div>
 
                 <div class="why-lerf">
@@ -205,12 +207,25 @@
                 <div id="why-lerf">
                     <h1> Transfer to other embodied task.</h1>
                     <p class="paragraph">
-                        We conduct experiments on the 1-Phase track of the <b>2023 ai2thor-rearrangement challenge</b> and find our method useful in this task. We start from a ResNet18+IL baseline that separately encodes the unshuffled image and agent's current observation(the walkthrough image) without fusion mechanism and learn from expert actions. Then we introduce our proposed <b>FGPrompt-EF module</b> into the baseline model by fusing the observation with the unshuffled image in an early stage, resulting in one jointly modeled ResNet encoder.
-                        With our FGPrompt, the agent performs much better than the baseline. We believe it helps the agent to locate correspondent or inconsistent objects in the environment.
+                        FGPrompt is also applicable in other embodied task, for example, the visual rearrangement task.
+                        We conduct experiments on the 1-Phase track of the <b><a href="https://github.com/allenai/ai2thor-rearrangement">2023 ai2thor-rearrangement challenge</a></b>.
+                        See visualization video bellow: 
+                    </p>
+
+                        <video id="add-video" autobuffer="" muted="" autoplay="" loop="" controls="">
+                            <source id="mp4" src="data/video/rearrangement.mp4" type="video/mp4">
+                        </video>
+
+                    <p class="paragraph">
+                        <!-- We start from a ResNet18+IL baseline that separately encodes the unshuffled image and agent's current observation(the walkthrough image) without fusion mechanism and learn from expert actions.  -->
+                        <!-- We introduce our proposed <b>FGPrompt-EF module</b> into the ResNet18+IL baseline model by fusing the observation with the unshuffled image in an early stage. -->
+                        <!-- , resulting in one jointly modeled ResNet encoder. -->
+                        With our FGPrompt, the agent performs much better than the baseline (with <b>more than 400% improvement</b> on the <b>Success</b> and <b>FixedStrict</b> metric). We believe it helps the agent to locate correspondent or inconsistent objects in the environment.
                     </p>
                     <img id="pipeline-img" src="./data/ai2thor.png">
                     <!-- <img id="why-lerf-img" src="./data/supp-early-visual_00.png">
                     <figcaption><b>left</b>: EigenCAM visualization of the <b>Mid Fusion</b> activation maps; <b>right</b>: EigenCAM visualization of the <b>Early Fusion</b> activation maps.</figcaption> -->
+
                 </div>
 
                 
@@ -227,6 +242,8 @@
 &nbsp;year = {2023},
 } </pre>
                 </div>
+
+                <b>Acknowledgement</b>: Source code for this page was taken from <a href="https://lerf.io">LERF's website.</a>
             </div>
         </div>
     </div>

@@ -169,6 +169,14 @@ body {
     border-radius: 15px;
 }
 
+#add-video {
+    width: 60%;
+    /* max-width: 750px; */
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
 #addtl-video {
     width: 100%;
     /* max-width: 750px; */
@@ -234,7 +242,7 @@ body {
 #clip-img {
     width: 100%;
     max-width: 700px;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 #main-img {
     width: 100%;
