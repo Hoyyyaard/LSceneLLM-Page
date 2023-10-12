@@ -162,15 +162,7 @@ body {
 }
 
 #main-video {
-    width: 80%;
-    /* max-width: 750px; */
-    margin-top: 0px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-}
-
-#add-video {
-    width: 60%;
+    width: 90%;
     /* max-width: 750px; */
     margin-top: 0px;
     margin-bottom: 10px;
@@ -242,7 +234,7 @@ body {
 #clip-img {
     width: 100%;
     max-width: 700px;
-    margin-top: 0px;
+    margin-top: 20px;
 }
 #main-img {
     width: 100%;
