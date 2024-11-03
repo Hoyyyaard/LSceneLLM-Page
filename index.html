@@ -100,7 +100,8 @@
 
             <div class="link-labels base-row">
                 <!-- TODO: Update arxiv link -->
-                <div class="base-col icon-col"><a href="https://arxiv.org/abs/2310.07473" target="_blank" class="link-block"><img src="./template/5cab99df4998decfbf9e218e_paper-01.png" alt="paper" sizes="(max-width: 479px) 12vw, (max-width: 767px) 7vw, (max-width: 991px) 41.8515625px, 56.6953125px" srcset="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01-p-500.png 500w, https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png 672w" class="icon-img"></a></div>
+                <div class="base-col icon-col"><a href="https://arxiv.org/abs/2310.07473" target="_blank" class="link-block">
+                    <img src="./template/5cab99df4998decfbf9e218e_paper-01.png" alt="paper" sizes="(max-width: 479px) 12vw, (max-width: 767px) 7vw, (max-width: 991px) 41.8515625px, 56.6953125px" src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01-p-500.png" class="icon-img"></a></div>
                 <!-- TODO: Update code link -->
                 <div class="base-col icon-col"><a href="https://github.com/XinyuSun/FGPrompt" class="link-block"><img src="./template/5cae3b53b42ebb3dd4175a82_68747470733a2f2f7777772e69636f6e66696e6465722e636f6d2f646174612f69636f6e732f6f637469636f6e732f313032342f6d61726b2d6769746875622d3235362e706e67.png" alt="paper" class="icon-img github-img-icon"></a></div>
                 <!-- TODO: Update data link -->
@@ -139,7 +140,7 @@
                     The average scene size in XR-Scene is <b>132m^2</b>, significantly larger than the 29m^2 of ScanQA.
                     Experiments show that our method achieves remarkable results and surpasses existing methods on both large scene understanding and existing scene understanding benchmarks.
                 </p>
-                <img id="pipeline-img" src="./new_data/teaser.png" style="max-width: 100%; height: auto;">
+                <img class="pipeline-img" src="./new_data/teaser.png" style="max-width: 100%; height: auto;">
                 <figcaption>
                     <b>(a)</b>: Existing methods suffer from scene details loss or heavy computation when facing large scenes.
                     <b>(b)</b>: We are committed to finding a balance between computational resources and preserving scene details through hierarchical modeling of the scene.
@@ -204,7 +205,7 @@
                         range of 3D understanding benchmarks.
                     </p>
                 </div>
-                <img id="pipeline-img" src="./new_data/result.png" style="max-width: 100%; height: auto;">
+                <img class="pipeline-img" src="./new_data/result.png" style="width: 100%;">
                 <!-- <img id="pipeline-img" src="./data/cross-domain-table.png"> -->
 
                 <div id="why-lerf">
@@ -213,7 +214,7 @@
                         We explore the areas the model focuses on when answering questions by visualizing the attention maps of the generated sequence of LLM to scene vision tokens.
                         LSceneLLM can accurately identifies the position of question-related objects in large scene.
                     </p>
-                    <img id="heatmap-img" src="./new_data/viz.png" style="max-width: 100%; height: auto;">
+                    <img class="heatmap-img" src="./new_data/viz.png" style="max-width: 100%; height: auto;">
                     <!-- <img id="why-lerf-img" src="./data/supp-early-visual_00.png"> -->
                     <!-- <figcaption><b>left</b>: EigenCAM visualization of the <b>Mid Fusion</b> activation maps; <b>right</b>: EigenCAM visualization of the <b>Early Fusion</b> activation maps.</figcaption> -->
                 </div>
